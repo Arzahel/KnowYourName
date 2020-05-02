@@ -79,7 +79,7 @@
 </template>
 
 <script>
-import router from 'F:/Test/frontend/src/router.js';
+import router from 'F:/KnowYourName/frontend/src/router.js';
 
 export default {
 
