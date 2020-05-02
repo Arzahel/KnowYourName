@@ -44,12 +44,18 @@
 </template>
 
 <script>
+import LoginForm from './components/LoginForm.vue';
+//import AdminHome from './components/AdminHome.vue';
+//import UserHome from './components/UserHome.vue';
+//import UserHome from './components/UserHome';
 
 export default {
   name: 'App',
 
-  data: () => ({
-    //
-  }),
+  components: {
+    LoginForm,
+  },
+
+  //data: () => ({}),
 };
 </script>

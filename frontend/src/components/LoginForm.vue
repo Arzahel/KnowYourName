@@ -69,7 +69,7 @@
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="primary" @click="$emit('logonAttempt')">Уваход</v-btn>
+                <v-btn color="primary" onclick="logonAttempt()">Уваход</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
