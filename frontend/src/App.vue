@@ -28,7 +28,7 @@
       <v-spacer></v-spacer>
 
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        @click="logonOpen()"
         target="_blank"
         text
       >
@@ -47,15 +47,21 @@
 import LoginForm from './components/LoginForm.vue';
 //import AdminHome from './components/AdminHome.vue';
 //import UserHome from './components/UserHome.vue';
-//import UserHome from './components/UserHome';
+import Home from './components/Home.vue';
+import router from './router.js';
 
 export default {
   name: 'App',
 
   components: {
+    Home,
     LoginForm,
   },
-
+  methods: {
+  logonOpen(){
+    router.push({name: 'logon'})
+  }  
+}
   //data: () => ({}),
 };
 </script>

@@ -9,5 +9,8 @@ new Vue({
   vuetify,
   router,
   render: h => h(App),
+  data: {
+    currentRoute: window.location.pathname
+  }
   //methods: {}
 }).$mount('#app')
