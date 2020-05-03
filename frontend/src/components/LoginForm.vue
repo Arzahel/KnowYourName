@@ -79,13 +79,11 @@
 </template>
 
 <script>
-import router from 'F:/KnowYourName/frontend/src/router.js';
-
 export default {
 
 methods: {
   logonAttempt(){
-    router.push({name: 'user', params: {id: '102'} })
+    this.$router.push({name: 'user', params: {id: '102'} })
   }  
 }
 }
