@@ -1,5 +1,4 @@
 <template>
-    <v-content>
       <v-container
         fluid
         fill-height
@@ -33,21 +32,7 @@
                       <v-icon>mdi-code-tags</v-icon>
                     </v-btn>
                   </template>
-                  <span>Source</span>
-                </v-tooltip>
-                <v-tooltip right>
-                  <template v-slot:activator="{ on }">
-                    <v-btn
-                      icon
-                      large
-                      href="https://codepen.io/johnjleider/pen/pMvGQO"
-                      target="_blank"
-                      v-on="on"
-                    >
-                      <v-icon>mdi-codepen</v-icon>
-                    </v-btn>
-                  </template>
-                  <span>Codepen</span>
+                  <span>Падказка</span>
                 </v-tooltip>
               </v-toolbar>
               <v-card-text>
@@ -75,7 +60,6 @@
           </v-flex>
         </v-layout>
       </v-container>
-    </v-content>
 </template>
 
 <script>

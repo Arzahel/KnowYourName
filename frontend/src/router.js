@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import LoginForm from './components/LoginForm.vue';
 import AdminHome from './components/AdminHome.vue';
-import UserHome from './components/UserHome.vue';
+import UserHome from './components/User/UserHome.vue';
 import Home from './components/Home.vue';
 
 Vue.use(Router)

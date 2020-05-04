@@ -5,26 +5,6 @@
       color="primary"
       dark
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
       <v-spacer></v-spacer>
 
       <v-btn
@@ -48,7 +28,6 @@ import LoginForm from './components/LoginForm.vue';
 //import AdminHome from './components/AdminHome.vue';
 //import UserHome from './components/UserHome.vue';
 import Home from './components/Home.vue';
-import router from './router.js';
 
 export default {
   name: 'App',
@@ -59,7 +38,7 @@ export default {
   },
   methods: {
   logonOpen(){
-    router.push({name: 'logon'})
+    this.$router.push({name: 'logon'})
   }  
 }
   //data: () => ({}),
