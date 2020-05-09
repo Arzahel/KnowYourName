@@ -22,6 +22,11 @@
             @click="logonOpen()"
             target="_blank"
           >увайдзіце ў лічны кабінет.</a>
+          Калі вы яшчэ не зарэгістрыраваліся, гэта можна зрабіць
+          <a
+            @click="registerOpen()"
+            target="_blank"
+          >тут.</a>
         </p>
       </v-col>
 
@@ -51,11 +56,16 @@
 
 <script>
   export default {
+
     name: 'Home',
     methods: {
-    logonOpen(){
-      this.$router.push({name: 'logon'})
-    }  
-  }
+      logonOpen(){
+        this.$router.push({name: 'logon'})
+      },
+      registerOpen(){
+        this.$router.push({name: 'register'})
+      }  
+    }
+
   }
 </script>

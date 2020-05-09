@@ -18,7 +18,7 @@
                 dark
                 flat
               >
-                <v-toolbar-title>Форма увахода</v-toolbar-title>
+                <v-toolbar-title>Форма рэгістрацыі</v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-tooltip bottom>
                   <template v-slot:activator="{ on }">
@@ -50,11 +50,18 @@
                     prepend-icon=""
                     type="password"
                   ></v-text-field>
+                  <v-text-field
+                    id="repeat-password"
+                    label="Пароль яшчэ раз"
+                    name="repeat-password"
+                    prepend-icon=""
+                    type="password"
+                  ></v-text-field>
                 </v-form>
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="primary" @click="logonAttempt()">Уваход</v-btn>
+                <v-btn color="primary" @click="logonOpen()">Пацвердзіць</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
@@ -66,10 +73,12 @@
 export default {
 
 methods: {
-  logonAttempt(){
-    this.$router.push({name: 'user', params: {id: '102'} })
-  }  
+  logonOpen(){
+    this.$router.push({name: 'logon'})
+  }
 }
+
+//document.getElementsByClassName('Icon Icon--bird bird-topbar-etched')[0].disabled  = true
 
 }
 </script>
