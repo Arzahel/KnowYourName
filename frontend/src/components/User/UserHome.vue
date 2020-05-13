@@ -67,7 +67,7 @@
           Штодзённыя заданні
         </h2>
 
-        <v-row justify="center">
+        <v-row justify="left">
           <a
             v-for="(next, i) in whatsNext"
             :key="i"
@@ -77,6 +77,10 @@
           >
             {{ next.text }}
           </a>
+          <v-card height="180px" link>
+            <v-card-title style="font-size:28px; text-align:center">Размінка</v-card-title>
+            <p style="padding:6px; font-size:16px">Атрымай крыху вопыта ў штодзённай гульні</p>
+          </v-card>
         </v-row>
       </v-col>
 
