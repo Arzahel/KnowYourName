@@ -38,12 +38,14 @@
               <v-card-text>
                 <v-form>
                   <v-text-field
+                    v-model="user.name"
                     label="Iмя карыстальнiка"
-                    name="login"
+                    id="username"
                     prepend-icon=""
                     type="text"
                   ></v-text-field>
                   <v-text-field
+                    v-model="user.password"
                     id="password"
                     label="Пароль"
                     name="password"
@@ -63,13 +65,33 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
+
+data: () => ({
+    user: {
+      name: null,
+      password: null,
+    },
+}),
 
 methods: {
   logonAttempt(){
-    this.$router.push({name: 'user', params: {id: '102'} })
-  }  
-}
+    axios.post('http://localhost:3000/logon', {
+      username: document.getElementById("username").innerText,
+      password: document.getElementById("password").innerText
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 
+    if (this.status == 200) {
+        this.$router.push({name: 'user', params: {id: '102'} })
+      }
+    }
+  }
 }
 </script>

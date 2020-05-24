@@ -1,5 +1,22 @@
 <template>
   <v-container>
+    <v-app-bar
+      app
+      color="primary"
+      dark
+    >
+      <v-spacer></v-spacer>
+
+      <v-btn
+        @click="logonOpen()"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">Уваход</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
+    </v-app-bar>
+    
     <v-row class="text-center">
       <v-col cols="12">
         <v-img

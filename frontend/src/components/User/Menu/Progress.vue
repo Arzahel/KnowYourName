@@ -21,9 +21,9 @@
   export default {
     data: () => ({
       cards: [
-        { title: 'Першыя крокі', description: "Прайсці першую частку Падарожжа" },
-        { title: 'Шырокай хадой', description: "Прайсці другую частку падарожжа" },
-        { title: 'Шпаркі', description: "Прайсці 3 раздзелы за 24 гадзіны ці менш" },
+        { title: 'Частка 1: ', description: "правапіс галосных" },
+        { title: 'Частка 2: ', description: "правапіс зычных" },
+        { title: 'Частка 3: ', description: "мяккі знак і апостраф" },
       ],
     }),
     methods:{

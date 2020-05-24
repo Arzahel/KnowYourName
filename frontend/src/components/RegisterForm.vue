@@ -61,7 +61,7 @@
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="primary" @click="logonOpen()">Пацвердзіць</v-btn>
+                <v-btn color="primary" @click="registerAttempt()">Пацвердзіць</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
@@ -70,10 +70,16 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
 
 methods: {
-  logonOpen(){
+  registerAttempt(){
+    axios
+      .post("https://localhost:3000", document.getElementsByName("login"),
+        document.getElementById("password"), document.getElementById("password-repeat")
+        )
     this.$router.push({name: 'logon'})
   }
 }

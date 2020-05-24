@@ -31,7 +31,7 @@
               </v-list-item-icon>
               <v-list-item-title>Дасягненні</v-list-item-title>
             </v-list-item>
-            <v-list-item link>
+            <v-list-item link @click="openProgress()">
               <v-list-item-icon>
                 <v-icon>mdi-chart-line</v-icon>
               </v-list-item-icon>
@@ -66,7 +66,6 @@
         <h2 class="headline font-weight-bold mb-3" style="text-align:center">
           Штодзённыя заданні
         </h2>
-
         <v-row justify="left">
           <a
             v-for="(next, i) in whatsNext"
@@ -120,7 +119,10 @@
     methods: {
       openAchievments(){
        this.$router.push({name: 'achievments', params: {id: '102'} })
-      }  
+      },
+      openProgress(){
+       this.$router.push({name: 'progress', params: {id: '102'} })
+      }
     }
 
   }
