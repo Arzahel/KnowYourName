@@ -5,6 +5,8 @@ import RegisterForm from './components/RegisterForm.vue';
 import AdminHome from './components/AdminHome.vue';
 import UserHome from './components/User/UserHome.vue';
 import Achievments from './components/User/Menu/Achievments.vue';
+import Materials from './components/User/Menu/Materials.vue';
+import JustTranslate from './components/User/Games/JustTranslate.vue';
 import Progress from './components/User/Menu/Progress.vue';
 import Home from './components/Home.vue';
 
@@ -43,6 +45,18 @@ export default new Router({
             path: '/user/:id/progress',
             name: 'progress',
             component: Progress,
+            props: true
+        },
+        {
+            path: '/user/:id/materials',
+            name: 'materials',
+            component: Materials,
+            props: true
+        },
+        {
+            path: '/user/:id/translate',
+            name: 'translate',
+            component: JustTranslate,
             props: true
         },
         {

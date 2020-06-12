@@ -37,7 +37,7 @@
               </v-list-item-icon>
               <v-list-item-title>Прагрэс</v-list-item-title>
             </v-list-item>
-            <v-list-item link>
+            <v-list-item link @click="openMaterials()">
               <v-list-item-icon>
                 <v-icon>mdi-file</v-icon>
               </v-list-item-icon>
@@ -76,7 +76,7 @@
           >
             {{ next.text }}
           </a>
-          <v-card height="180px" link>
+          <v-card height="180px" link @click="openActivity()">
             <v-card-title style="font-size:28px; text-align:center">Размінка</v-card-title>
             <p style="padding:6px; font-size:16px">Атрымай крыху вопыта ў штодзённай гульні</p>
           </v-card>
@@ -122,6 +122,12 @@
       },
       openProgress(){
        this.$router.push({name: 'progress', params: {id: '102'} })
+      },
+      openActivity(){
+       this.$router.push({name: 'translate', params: {id: '102'} })
+      },
+      openMaterials(){
+       this.$router.push({name: 'materials', params: {id: '102'} })
       }
     }
 

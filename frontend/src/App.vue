@@ -12,7 +12,7 @@ import LoginForm from './components/LoginForm.vue';
 //import UserHome from './components/UserHome.vue';
 import Home from './components/Home.vue';
 
-var backendPort = "http://localhost:3000"
+//var backendPort = "http://localhost:3000"
 
 export default {
   name: 'App',
@@ -24,7 +24,7 @@ export default {
   methods: {
   logonOpen(){
     this.$router.push({name: 'logon'})
-  }  
+  }
 }
   //data: () => ({}),
 };

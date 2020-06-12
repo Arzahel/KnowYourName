@@ -17,9 +17,8 @@
         <v-icon>mdi-arrow-left-circle</v-icon>
       </v-btn>
       
-      
       <!--<v-spacer></v-spacer>-->
-      <p style="font-size:32px" class="text-center">Дасягненні</p>
+      <p class="text-center" style="font-size:32px">Дасягненні</p>
     </v-app-bar>
 
       <v-row dense>

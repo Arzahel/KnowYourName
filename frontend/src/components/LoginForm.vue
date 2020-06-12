@@ -65,7 +65,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+//import axios from 'axios';
 export default {
 
 data: () => ({
@@ -77,7 +77,7 @@ data: () => ({
 
 methods: {
   logonAttempt(){
-    axios.post('http://localhost:3000/logon', {
+    /*axios.post('http://localhost:3000/logon', {
       username: document.getElementById("username").innerText,
       password: document.getElementById("password").innerText
     })
@@ -86,11 +86,11 @@ methods: {
     })
     .catch(function (error) {
       console.log(error);
-    });
+    });*/
 
-    if (this.status == 200) {
+    //if (this.status == 200) {
         this.$router.push({name: 'user', params: {id: '102'} })
-      }
+     // }
     }
   }
 }
