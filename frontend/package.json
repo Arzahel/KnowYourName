@@ -11,6 +11,7 @@
     "core-js": "^3.6.4",
     "sass-loader": "^8.0.2",
     "vue": "^2.6.11",
+    "vue-cli": "^2.9.6",
     "vue-router": "^3.1.6",
     "vuetify": "^2.2.26"
   },
@@ -46,5 +47,9 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "```\r npm install\r ```",
+  "main": "babel.config.js",
+  "author": "",
+  "license": "ISC"
 }
