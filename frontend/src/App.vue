@@ -1,22 +1,5 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <v-spacer></v-spacer>
-
-      <v-btn
-        @click="logonOpen()"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Уваход</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
     <v-content>
       <router-view/>
     </v-content>
@@ -29,6 +12,8 @@ import LoginForm from './components/LoginForm.vue';
 //import UserHome from './components/UserHome.vue';
 import Home from './components/Home.vue';
 
+//var backendPort = "http://localhost:3000"
+
 export default {
   name: 'App',
 
@@ -39,7 +24,7 @@ export default {
   methods: {
   logonOpen(){
     this.$router.push({name: 'logon'})
-  }  
+  }
 }
   //data: () => ({}),
 };

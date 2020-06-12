@@ -10,7 +10,8 @@ new Vue({
   router,
   render: h => h(App),
   data: {
-    currentRoute: window.location.pathname
+    currentRoute: window.location.pathname,
+    backendRoute: "http://localhost:3000"
   }
   //methods: {}
 }).$mount('#app')

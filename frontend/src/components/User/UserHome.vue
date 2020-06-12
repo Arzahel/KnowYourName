@@ -31,13 +31,13 @@
               </v-list-item-icon>
               <v-list-item-title>Дасягненні</v-list-item-title>
             </v-list-item>
-            <v-list-item link>
+            <v-list-item link @click="openProgress()">
               <v-list-item-icon>
                 <v-icon>mdi-chart-line</v-icon>
               </v-list-item-icon>
               <v-list-item-title>Прагрэс</v-list-item-title>
             </v-list-item>
-            <v-list-item link>
+            <v-list-item link @click="openMaterials()">
               <v-list-item-icon>
                 <v-icon>mdi-file</v-icon>
               </v-list-item-icon>
@@ -66,7 +66,6 @@
         <h2 class="headline font-weight-bold mb-3" style="text-align:center">
           Штодзённыя заданні
         </h2>
-
         <v-row justify="left">
           <a
             v-for="(next, i) in whatsNext"
@@ -77,7 +76,7 @@
           >
             {{ next.text }}
           </a>
-          <v-card height="180px" link>
+          <v-card height="180px" link @click="openActivity()">
             <v-card-title style="font-size:28px; text-align:center">Размінка</v-card-title>
             <p style="padding:6px; font-size:16px">Атрымай крыху вопыта ў штодзённай гульні</p>
           </v-card>
@@ -120,7 +119,16 @@
     methods: {
       openAchievments(){
        this.$router.push({name: 'achievments', params: {id: '102'} })
-      }  
+      },
+      openProgress(){
+       this.$router.push({name: 'progress', params: {id: '102'} })
+      },
+      openActivity(){
+       this.$router.push({name: 'translate', params: {id: '102'} })
+      },
+      openMaterials(){
+       this.$router.push({name: 'materials', params: {id: '102'} })
+      }
     }
 
   }
