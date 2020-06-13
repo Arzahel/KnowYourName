@@ -4,23 +4,19 @@
       app
       color="primary"
       dark
-    >
-
-      <v-btn
-        left
-        @click="toUserHome()"
-        target="_blank"
-        text
       >
-
-        <span class="mr-2">Назад</span>
-        <v-icon>mdi-arrow-left-circle</v-icon>
-      </v-btn>
-      
-      
-      <!--<v-spacer></v-spacer>-->
-      <p style="font-size:32px" class="text-center">Дасягненні</p>
-    </v-app-bar>
+        <v-btn
+            left
+            @click="toUserHome()"
+            target="_blank"
+            text
+        >
+          <span class="mr-2">Назад</span>
+          <v-icon>mdi-arrow-left-circle</v-icon>
+        </v-btn>
+        <!--<v-spacer></v-spacer>-->
+        <div style="font-size:32px; margin-left:50px" >Дасягненні</div>
+      </v-app-bar>
 
       <v-row dense>
         <v-col

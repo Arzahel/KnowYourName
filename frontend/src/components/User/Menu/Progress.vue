@@ -1,5 +1,23 @@
 <template>
     <v-container fluid>
+      <v-app-bar
+      app
+      color="primary"
+      dark
+      >
+        <v-btn
+            left
+            @click="toUserHome()"
+            target="_blank"
+            text
+        >
+          <span class="mr-2">Назад</span>
+          <v-icon>mdi-arrow-left-circle</v-icon>
+        </v-btn>
+        <!--<v-spacer></v-spacer>-->
+        <div style="font-size:32px; margin-left:50px" >Прагрэс</div>
+      </v-app-bar>
+
       <v-row dense>
         <v-col
           v-for="(card, index) in cards"
@@ -14,6 +32,7 @@
           </v-card>
         </v-col>
       </v-row>
+      
     </v-container>
 </template>
 
@@ -29,7 +48,10 @@
     methods:{
       changeColor(el){
         el.style.background = 'green';
-      }
+      },
+        toUserHome(){
+            this.$router.push({name: 'user', params: {id: '102'} })
+        }
     }
 
   }

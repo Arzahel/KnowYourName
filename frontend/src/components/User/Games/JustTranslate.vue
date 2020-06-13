@@ -1,53 +1,52 @@
 <template>
     <v-container fluid class="justify-center">
-        <v-app-bar
-        app
-        color="primary"
-        dark
+      <v-app-bar
+      app
+      color="primary"
+      dark
+      >
+        <v-btn
+            left
+            @click="toUserHome()"
+            target="_blank"
+            text
         >
-            <v-btn
-                left
-                @click="toUserHome()"
-                target="_blank"
-                text
-            >
+          <span class="mr-2">Назад</span>
+          <v-icon>mdi-arrow-left-circle</v-icon>
+        </v-btn>
+        <!--<v-spacer></v-spacer>-->
+        <div style="font-size:32px; margin-left:50px" >Гульня</div>
+      </v-app-bar>
 
-                <span class="mr-2">Назад</span>
-                <v-icon>mdi-arrow-left-circle</v-icon>
-            </v-btn>
-            <!--<v-spacer></v-spacer>-->
-            <div style="font-size:32px; float:center; text-align:center" class="justify-center">Гульня</div>
-        </v-app-bar>
-        <v-card
-        class="d-flex align-center justify-center pa-4 mx-auto"
-        max-width="720"
-        min-height="200"
-        outlined
-        >
-            <v-row dense>
-                <div min-height="100"
-                class="justify-center text-center"
-                style="font-size:24px; text-align:center"
-                >
-                    {{displayAnswer}}
-                </div>
-                
-            </v-row>
-            <v-divider></v-divider>
-            <v-row dense no-gutters style="float:center" class="justify-center">
+      <v-container
+      min-height="600"
+      outlined
+      >
+              <div min-height="100"
+              class="justify-center text-center"
+              style="font-size:24px; text-align:center"
+              >
+                  {{displayAnswer}}
+              </div>
+              <p style="font-size:24px" justify="right">Лiк: {{counter}}</p>
+              <v-divider></v-divider>
+
+              <v-row no-gutters class="justify-center" style="margin-top:20px">
                 <v-col
-                    v-for="word in currentWords"
-                    :key="word"
-                    :cols="3"
+                v-for="word in currentWords"
+                :key="word"
+                :cols="3"
                 >
-                    <v-card link min-height="100" class="justify-center text-center" style="font-size:24px; text-align:center; background:#fff5d7"
-                    @click="checkAnswer(this.textContent)"
+                    <v-card link min-height="100" class="justify-center text-center"
+                    style="font-size:24px; text-align:center; background:#fff5d7"
+                    @click="checkAnswer(word.text)"
                     >
-                        {{word.text}}
+                      {{word.text}}
                     </v-card>
                 </v-col>
-            </v-row>
-        </v-card>
+              </v-row>
+              
+      </v-container>
     </v-container>
 </template>
     
@@ -59,7 +58,6 @@ export default {
       dictionary: null,
       currentWords: [{text: 'Лыжка'}, {text: 'Дзюба'}, {text:'Кветка'}],
       displayAnswer: 'Ложка',
-      currentAnswer: null,
       correctAnswer: 'Лыжка',
       counter: 0
     }),
@@ -78,12 +76,11 @@ export default {
             this.getDictionary();           
         },
         checkAnswer(answer){
-            alert(answer);
-            if (answer != this.currentAnswer) this.refreshWords();
-            else {
-                this.counter+=1;
-                this.refreshWords();
-            }
+            if (answer == this.correctAnswer) {
+              this.counter+=1;
+              alert("Вы адказалi правiльна!");
+            } else alert("Памылка. Правiльны адказ - " + this.correctAnswer)
+            this.refreshWords();
         },
         toUserHome(){
             this.$router.push({name: 'user', params: {id: '102'} })

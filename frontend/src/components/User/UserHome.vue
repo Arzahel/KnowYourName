@@ -4,8 +4,8 @@
       <v-navigation-drawer
           permanent
         >
-      <v-list style="text-align:center; justify:space-around">
-            <v-list-item class="px-2">
+        <v-list style="text-align:center;">
+            <v-list-item class="px-2" justify="center" style="margin-left:40%">
               <v-list-item-avatar>
                 <v-img :src="require('../../assets/avatar_default.png')"></v-img>
               </v-list-item-avatar>
@@ -17,41 +17,42 @@
                 <v-list-item-subtitle >0</v-list-item-subtitle>
               </v-list-item-content>
             </v-list-item>
-          </v-list>
+        </v-list>
 
-          <v-divider></v-divider>
+        <v-divider></v-divider>
 
-          <v-list
-            nav
-            dense
-          >
-            <v-list-item link @click="openAchievments()">
-              <v-list-item-icon>
-                <v-icon>mdi-star</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Дасягненні</v-list-item-title>
-            </v-list-item>
-            <v-list-item link @click="openProgress()">
-              <v-list-item-icon>
-                <v-icon>mdi-chart-line</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Прагрэс</v-list-item-title>
-            </v-list-item>
-            <v-list-item link @click="openMaterials()">
-              <v-list-item-icon>
-                <v-icon>mdi-file</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Матэрыялы</v-list-item-title>
-            </v-list-item>
-            <v-list-item link>
-              <v-list-item-icon>
-                <v-icon>mdi-cog</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Налады</v-list-item-title>
-            </v-list-item>
-          </v-list>
-          </v-navigation-drawer>
+        <v-list
+          nav
+          dense
+        >
+          <v-list-item link @click="openAchievments()">
+            <v-list-item-icon>
+              <v-icon>mdi-star</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Дасягненні</v-list-item-title>
+          </v-list-item>
+          <v-list-item link @click="openProgress()">
+            <v-list-item-icon>
+              <v-icon>mdi-chart-line</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Прагрэс</v-list-item-title>
+          </v-list-item>
+          <v-list-item link @click="openMaterials()">
+            <v-list-item-icon>
+              <v-icon>mdi-file</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Матэрыялы</v-list-item-title>
+          </v-list-item>
+          <v-list-item link>
+            <v-list-item-icon>
+              <v-icon>mdi-cog</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Налады</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
     </v-row>
+    
     <v-row class="row-right" style="width:80%; float:right; overflow:auto">
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3" style="text-align:center">
@@ -67,15 +68,6 @@
           Штодзённыя заданні
         </h2>
         <v-row justify="left">
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
           <v-card height="180px" link @click="openActivity()">
             <v-card-title style="font-size:28px; text-align:center">Размінка</v-card-title>
             <p style="padding:6px; font-size:16px">Атрымай крыху вопыта ў штодзённай гульні</p>
@@ -91,16 +83,11 @@
           Падзеі
         </h2>
 
-        <v-row justify="center">
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ link.text }}
-          </a>
+        <v-row justify="left">
+          <v-card height="180px" link @click="openActivity()">
+            <v-card-title style="font-size:28px; text-align:center">Размінка</v-card-title>
+            <p style="padding:6px; font-size:16px">Атрымай крыху вопыта ў штодзённай гульні</p>
+          </v-card>
         </v-row>
       </v-col>
     </v-row>
