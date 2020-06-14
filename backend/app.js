@@ -11,9 +11,9 @@ const logger = require('./utils/logger');
 const indexRouter = require('./routes/index');
 
 const Sequelize = require("sequelize");
-const sequelize = new Sequelize("appdb", "root", "Lenin7521103", {
+const sequelize = new Sequelize("sql7348282", "sql7348282", "lmVQLUqmkr", {
   dialect: "mysql",
-  host: "localhost",
+  host: "sql7.freemysqlhosting.net",
   port: "3306"
 });
 

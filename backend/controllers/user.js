@@ -17,30 +17,27 @@ const generateToken = (userId) => {
 module.exports = {
   signIn: async (req, res, next) => {
     try {
-      const user = await userService.findByEmail(req.body.email);
+      const user = await User.findOne({where:{name: req.body.name}, raw: true });
 
       if (!user) {
         return next({
-          message: `Can not find user with email: ${req.body.email}`,
+          message: `Can not find user with name: ${req.body.email}`,
           status: 400,
         });
       }
 
-      const result = await bcrypt.compare(req.body.password, user.password);
-
-      if (result) {
+      if (user.password == req.body.password) {
         return res.status(200).send({
-          message: 'ok',
+          isAdmin: user.isAdmin,
           token: generateToken(user.id),
+          });
+        } else return next({
+          status: 400,
+          message: 'Incorrect password',
         });
-      }
 
-      return next({
-        status: 400,
-        message: 'Incorrect password',
-      });
     } catch (err) {
-      logger.warn(err, ['Controllers', 'User', 'SignIn', `Email: ${req.body.email}`]);
+      logger.warn(err, ['Controllers', 'User', 'SignIn', `Name: ${req.body.name}`]);
 
       return next(err);
     }
