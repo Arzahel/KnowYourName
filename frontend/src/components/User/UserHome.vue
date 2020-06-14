@@ -52,7 +52,7 @@
         </v-list>
       </v-navigation-drawer>
     </v-row>
-    
+
     <v-row class="row-right" style="width:80%; float:right; overflow:auto">
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3" style="text-align:center">
@@ -68,7 +68,7 @@
           Штодзённыя заданні
         </h2>
         <v-row justify="left">
-          <v-card height="180px" link @click="openActivity()">
+          <v-card height="180px" max-width="350px" link @click="openActivity()">
             <v-card-title style="font-size:28px; text-align:center">Размінка</v-card-title>
             <p style="padding:6px; font-size:16px">Атрымай крыху вопыта ў штодзённай гульні</p>
           </v-card>
@@ -84,9 +84,9 @@
         </h2>
 
         <v-row justify="left">
-          <v-card height="180px" link @click="openActivity()">
-            <v-card-title style="font-size:28px; text-align:center">Размінка</v-card-title>
-            <p style="padding:6px; font-size:16px">Атрымай крыху вопыта ў штодзённай гульні</p>
+          <v-card height="180px" max-width="350px" link @click="openActivity()">
+            <v-card-title style="font-size:28px; text-align:center">Адпачынак улетку</v-card-title>
+            <p style="padding:6px; font-size:16px">Прыйшла пара сонца, усмешак i вялiкiх канiкул. Даведайся, як правiльна размаўляць на мове ў гэты час.</p>
           </v-card>
         </v-row>
       </v-col>
