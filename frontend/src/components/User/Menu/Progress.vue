@@ -25,8 +25,7 @@
           :cols="2"
           :id=index
         >
-
-          <v-card height="180px" class="achievment" @click="changeColor(this)">
+          <v-card height="180px" class="achievment" @click="openExercise()">
             <v-card-title style="font-size:28px; text-align:center">{{card.title}}</v-card-title>
             <p style="padding:6px; font-size:16px" v-text="card.description"></p>
           </v-card>
@@ -49,9 +48,12 @@
       changeColor(el){
         el.style.background = 'green';
       },
-        toUserHome(){
-            this.$router.push({name: 'user', params: {id: '102'} })
-        }
+      toUserHome(){
+        this.$router.push({name: 'user', params: {id: '102'} })
+      },
+      openExercise(){
+        this.$router.push({name: 'exercise', params: {id: '102'} })
+      }
     }
 
   }
