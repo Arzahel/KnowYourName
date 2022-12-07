@@ -4,7 +4,7 @@
   "description": "��#\u0000 \u0000K\u0000n\u0000o\u0000w\u0000Y\u0000o\u0000u\u0000r\u0000N\u0000a\u0000m\u0000e\u0000\r\u0000 \u0000",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "sequelize": "^5.21.8",
     "vue": "^2.6.11"
   },
